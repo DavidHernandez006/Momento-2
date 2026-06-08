@@ -14,39 +14,83 @@
 </head>
 
 <body>
+    <!-- Barra de navegación principal -->
+    <!-- Actúa como contenedor Flexbox para separar el logo y los enlaces -->
     <nav class="navegacion">
-        <div class="logo">BARBERÍA</div>
+        <!-- Logo de la empresa (Se alineará a la izquierda gracias a justify-content: space-between) -->
+        <div class="logo" style="display: flex; align-items: center; gap: 15px;">
+            <img src="Gemini_Generated_Image_whyjk0whyjk0whyj.png" alt="Logo Barbería"
+                style="height: 50px; width: auto; border-radius: 50%; object-fit: cover;">
+            <span>BARBERÍA</span>
+        </div>
+
+        <!-- Contenedor de los enlaces -->
+        <!-- Esta lista <ul> también es un contenedor Flexbox para mostrar los enlaces en línea horizontal -->
         <ul class="nav-links">
             <li><a href="#">Inicio</a></li>
             <li><a href="#">Beneficios</a></li>
             <li><a href="#">Contacto</a></li>
         </ul>
     </nav>
-    <header>
+    <header class="hero">
         <h1 class="Titulo">BARBERÍA TRADICIONAL</h1>
+        <p class="hero-subtitle">El mejor estilo para el hombre moderno</p>
+        <button class="btn btn-hero">Reserva tu cita</button>
     </header>
     <div class="container">
         <main>
             <section class="services">
-                <h2 style="text-align: center; width: 100%;">Nuestros Beneficios y Servicios</h2>
+                <h2 style="text-align: center; width: 100%;">Nuestros Servicios</h2>
                 <div class="services-container">
                     <div class="service-item">
                         <h3>Corte Clásico</h3>
                         <p>El corte tradicional a tijera o máquina, con un acabado perfecto.</p>
                         <img src="corte_clasico.png" alt="Corte Clásico" class="service-img">
+                        <p class="price" style="font-size: 1.2em; font-weight: bold; margin: 10px 0; color: #f39c12;">
+                            $25.000</p>
                         <button class="btn">Reservar</button>
                     </div>
                     <div class="service-item">
                         <h3>Arreglo de Barba</h3>
                         <p>Perfilado y recorte con toalla caliente, al estilo de la vieja escuela.</p>
                         <img src="arreglo_barba.png" alt="Arreglo de Barba" class="service-img">
+                        <p class="price" style="font-size: 1.2em; font-weight: bold; margin: 10px 0; color: #f39c12;">
+                            $40.000</p>
                         <button class="btn">Reservar</button>
                     </div>
                     <div class="service-item">
                         <h3>Afeitado Clásico</h3>
                         <p>El afeitado tradicional con navaja, para un acabado perfecto.</p>
-                        <img src="afeitado_clasico.png" alt="Afeitado Clásico" class="service-img">
+                        <img src="Gemini_Generated_Image_nvc9t3nvc9t3nvc9.png" alt="Afeitado Clásico"
+                            class="service-img">
+                        <p class="price" style="font-size: 1.2em; font-weight: bold; margin: 10px 0; color: #f39c12;">
+                            $20.000</p>
                         <button class="btn">Reservar</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="beneficios-section" style="margin-top: 40px;">
+                <h2 style="text-align: center; width: 100%;">Nuestros Beneficios</h2>
+                <div class="beneficios">
+                    <div class="service-item">
+                        <h3>Tratamiento Facial</h3>
+                        <p>Cuidado de la piel y limpieza profunda para un rostro impecable.</p>
+                        <img src="tratamiento_facial.png" alt="Tratamiento Facial" class="service-img">
+                        <button class="btn">Saber más</button>
+                    </div>
+                    <div class="service-item">
+                        <h3>Productos Premium</h3>
+                        <p>Uso exclusivo de las mejores marcas para el cuidado de barba y cabello.</p>
+                        <img src="productos_premium.png" alt="Productos Premium" class="service-img">
+                        <button class="btn">Saber más</button>
+                    </div>
+                    <div class="service-item">
+                        <h3>Ambiente Relajante</h3>
+                        <p>Disfruta de una experiencia única con sillas vintage, buena música y bebida de cortesía.</p>
+                        <img src="Gemini_Generated_Image_lgo33klgo33klgo3.png" alt="Ambiente Relajante"
+                            class="service-img">
+                        <button class="btn">Saber más</button>
                     </div>
                 </div>
             </section>

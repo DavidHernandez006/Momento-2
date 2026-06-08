@@ -1,115 +1,200 @@
+/* =========================================
+   ESTILOS GENERALES Y BASE
+   ========================================= */
+
+/* Estilos para todo el cuerpo de la página */
 body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    /*margen es el espacio entre los elementos*/
+    font-family: 'Montserrat', sans-serif; /* Tipo de letra principal */
+    margin: 0; /* Quitamos el margen por defecto del navegador para que ocupe todo el ancho */
+    background-color: #0d0d0d; /* Color de fondo muy oscuro (casi negro) */
+    color: #ffffff; /* Color del texto general en blanco */
+}
+
+/* =========================================
+   SECCIÓN PRINCIPAL (HERO)
+   ========================================= */
+
+/* El encabezado principal que da la bienvenida */
+.hero {
+    /* Imagen de fondo con un oscurecimiento (linear-gradient) para que el texto se lea mejor */
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('bg.png');
-    /*es para poner una imagen*/
-    background-size: cover;
-    /*es para que la imagen se ajuste a la pantalla*/
-    background-position: center;
-    /*es para que la imagen se centre*/
-    background-attachment: fixed;
-    /*es para que la imagen se mantenga fija*/
-    color: #ffffff;
-    /*es para poner el color del texto*/
+    background-size: cover; /* La imagen cubre toda el área sin deformarse */
+    background-position: center; /* Centramos la imagen */
+    background-attachment: fixed; /* Efecto parallax: la imagen se queda fija al hacer scroll */
+    height: 75vh; /* Altura: ocupa el 75% del alto total de la pantalla visible */
+    
+    /* Flexbox para centrar el contenido (título y botón) perfectamente en el medio */
+    display: flex;
+    flex-direction: column; /* Coloca los elementos de arriba hacia abajo (en columna) */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    text-align: center; /* Centra el texto */
 }
 
-h2,
-h3 {
-    font-family: 'Oswald', sans-serif;
+/* Subtítulo debajo del título principal */
+.hero-subtitle {
+    font-size: 1.2em; /* Tamaño de letra un poco más grande de lo normal */
+    margin-bottom: 20px; /* Separación hacia abajo antes del botón */
+    color: #cccccc; /* Color gris claro */
 }
 
+/* Botón específico del encabezado */
+.btn-hero {
+    font-size: 1.1em; /* Letra más grande para llamar la atención */
+    padding: 12px 30px; /* Espacio interno del botón (arriba/abajo y lados) */
+}
+
+/* =========================================
+   TÍTULOS Y CONTENEDORES
+   ========================================= */
+
+/* Títulos secundarios */
+h2, h3 {
+    font-family: 'Oswald', sans-serif; /* Tipo de letra diferente y llamativo para títulos */
+}
+
+/* Título principal de la página (El de la Barbería) */
 .Titulo {
     font-family: 'Oswald', sans-serif;
-    font-size: 2em;
-    text-align: center;
-    color: #ffffff;
+    font-size: 2em; /* Doble de grande que el texto normal */
+    text-align: center; /* Texto centrado */
+    color: #ffffff; /* Letra blanca */
 }
 
+/* Contenedor que agrupa las secciones para que no peguen a los bordes de la pantalla */
 .container {
-    width: 95%;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #1a1a1a;
-    border-radius: 10px;
+    width: 95%; /* Ocupa el 95% del ancho disponible */
+    max-width: 1200px; /* Pero nunca será más ancho de 1200px (para pantallas muy grandes) */
+    margin: 20px auto; /* Margen arriba/abajo de 20px, y automático a los lados para centrarlo */
+    padding: 20px; /* Espacio interno de 20px */
+    background-color: #1a1a1a; /* Fondo gris oscuro */
+    border-radius: 10px; /* Bordes redondeados */
     background-position: center;
 }
 
+/* =========================================
+   BOTONES
+   ========================================= */
+
+/* Estilo general para todos los botones */
 .btn {
-    background-color: #ffffff;
-    color: #1a1a1a;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    margin: 15px auto 0;
-    font-weight: 600;
-    border: none;
+    background-color: #ffffff; /* Fondo blanco */
+    color: #1a1a1a; /* Texto gris oscuro */
+    padding: 10px 20px; /* Espaciado interno: 10px arriba/abajo, 20px izquierda/derecha */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    cursor: pointer; /* Cambia el cursor a una 'manito' al pasar por encima */
+    display: block; /* Ocupa su propia línea (bloque) */
+    margin: 15px auto 0; /* Margen: 15px arriba, centrado a los lados, 0 abajo */
+    font-weight: 600; /* Letra en negrita (grosor 600) */
+    border: none; /* Sin borde exterior */
+    
+    /* Efecto de transición para que los cambios de color/movimiento sean suaves (0.3 segundos) */
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
 }
 
+/* Efecto al pasar el ratón por encima del botón (Hover) */
+.btn:hover {
+    background-color: #f39c12; /* Cambia a color dorado */
+    color: #ffffff; /* Cambia el texto a blanco */
+    transform: translateY(-3px); /* Levanta el botón 3 píxeles hacia arriba */
+}
+
+/* =========================================
+   IMÁGENES DE LAS TARJETAS
+   ========================================= */
+
+/* Imágenes dentro de los servicios o beneficios */
 .service-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 15px;
+    width: 100%; /* La imagen ocupa todo el ancho de su tarjeta */
+    height: 200px; /* Altura fija para que todas las imágenes se vean iguales */
+    object-fit: cover; /* Recorta la imagen sin deformarla para llenar el espacio */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 15px; /* Separación debajo de la imagen */
 }
 
-/* Flexbox para la barra de navegación */
+/* =========================================
+   BARRA DE NAVEGACIÓN (HEADER SUPERIOR)
+   ========================================= */
+
+/* Contenedor de la barra de navegación */
 .navegacion {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: rgba(0, 0, 0, 0.8);
+    display: flex; /* Activa Flexbox para poner elementos uno al lado del otro */
+    justify-content: space-between; /* El logo a la izquierda, los enlaces a la derecha */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 20px 50px; /* Espacio interno arriba/abajo 20px, y a los lados 50px */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semi-transparente (80% opacidad) */
 }
 
+/* Estilo para el logo en texto */
 .logo {
     font-family: 'Oswald', sans-serif;
     font-size: 1.8em;
-    font-weight: 700;
+    font-weight: 700; /* Negrita muy gruesa */
 }
 
+/* Contenedor de los enlaces (la lista ul) */
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+    list-style: none; /* Quita los puntos ("bullets") de la lista */
+    display: flex; /* Alinea los enlaces horizontalmente */
+    gap: 30px; /* Crea una separación de 30px entre cada enlace */
+    margin: 0; /* Quita el margen por defecto */
+    padding: 0; /* Quita el relleno por defecto */
 }
 
+/* Estilo individual de cada enlace dentro de la barra de navegación */
 .nav-links li a {
-    color: #ffffff;
-    text-decoration: none;
+    color: #ffffff; /* Texto blanco */
+    text-decoration: none; /* Quita la línea de subrayado de los enlaces */
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    transition: color 0.3s;
+    transition: color 0.3s; /* Transición suave de 0.3 segundos para cuando cambie de color */
 }
 
+/* Efecto al pasar el ratón sobre un enlace */
 .nav-links li a:hover {
-    color: #f39c12;
+    color: #f39c12; /* Cambia el color del texto a dorado */
 }
 
-/* Flexbox para las tarjetas de características/beneficios (servicios) */
+/* =========================================
+   TARJETAS DE SERVICIOS Y BENEFICIOS
+   ========================================= */
+
+/* Contenedor que agrupa las tarjetas de los servicios */
 .services-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    /* para que sea responsivo */
+    display: flex; /* Alinea las tarjetas en una fila horizontal */
+    justify-content: space-between; /* Reparte el espacio sobrante entre las tarjetas */
+    gap: 20px; /* Separación de 20px entre cada tarjeta */
+    flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente línea si la pantalla es muy pequeña (responsivo) */
 }
 
+/* Estilo para cada tarjeta individual de servicio o beneficio */
 .service-item {
-    flex: 1;
-    /* ocupa el mismo ancho */
-    min-width: 250px;
-    /* ancho mínimo para móviles */
-    background-color: #2a2a2a;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
+    flex: 1; /* Hace que todas las tarjetas crezcan y ocupen el mismo ancho */
+    min-width: 250px; /* Ancho mínimo para que no se aplasten en celulares */
+    background-color: #2a2a2a; /* Fondo gris un poco más claro que el contenedor principal */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    border-radius: 8px; /* Bordes redondeados */
+    text-align: center; /* Todo el texto centrado */
+    
+    /* Flexbox dentro de la tarjeta para alinear su contenido en vertical */
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column; /* Organiza los elementos de arriba hacia abajo */
+    justify-content: space-between; /* Separa los elementos empujando el botón hacia abajo */
+    
+    /* Efecto de transición suave al moverse o crear sombra */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efecto al pasar el ratón sobre la tarjeta entera */
+.service-item:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta 5 píxeles hacia arriba */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5); /* Crea una sombra oscura debajo simulando que flota */
+}
+
+/* Contenedor específico para la sección de beneficios (funciona igual que services-container) */
+.beneficios {
+    display: flex; /* Alinea las tarjetas horizontalmente */
+    justify-content: space-between; /* Distribuye espacio */
+    gap: 20px; /* Espacio entre tarjetas */
+    flex-wrap: wrap; /* Pasa elementos a otra línea si no caben */
 }
