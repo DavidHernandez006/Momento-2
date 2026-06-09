@@ -51,9 +51,18 @@ body {
 /* Botón específico del encabezado */
 .btn-hero {
     font-size: 1.1em;
-    /* Letra más grande para llamar la atención */
+    /* Letra más grande  */
     padding: 12px 30px;
     /* Espacio interno del botón (arriba/abajo y lados) */
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.btn-hero:hover {
+    background-color: #f39c12;
+    color: #ffffff;
+    transform: translateY(-5px);
 }
 
 
@@ -91,9 +100,8 @@ h3 {
     background-position: center;
 }
 
-/* =========================================
-   BOTONES
-   ========================================= */
+
+
 
 /* Estilo general para todos los botones */
 .btn {
@@ -130,9 +138,8 @@ h3 {
     /* Levanta el botón 3 píxeles hacia arriba */
 }
 
-/* =========================================
-   IMÁGENES DE LAS TARJETAS
-   ========================================= */
+
+
 
 /* Imágenes dentro de los servicios o beneficios */
 .service-img {
@@ -148,9 +155,6 @@ h3 {
     /* Separación debajo de la imagen */
 }
 
-/* =========================================
-   BARRA DE NAVEGACIÓN (HEADER SUPERIOR)
-   ========================================= */
 
 /* Contenedor de la barra de navegación */
 .navegacion {
@@ -206,9 +210,8 @@ h3 {
     /* Cambia el color del texto a dorado */
 }
 
-/* =========================================
-   TARJETAS DE SERVICIOS Y BENEFICIOS
-   ========================================= */
+
+
 
 /* Contenedor que agrupa las tarjetas de los servicios */
 .services-container {
