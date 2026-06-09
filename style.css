@@ -14,7 +14,7 @@ body {
 
 /* El encabezado principal que da la bienvenida */
 .hero {
-    /* Imagen de fondo con un oscurecimiento (linear-gradient) para que el texto se lea mejor */
+    /* Imagen de fondo con un oscurecimiento para que el texto se lea mejor */
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('bg.png');
     background-size: cover;
     /* La imagen cubre toda el área sin deformarse */
@@ -66,7 +66,7 @@ body {
 }
 
 
-/* Títulos secundarios */
+/* Títulos */
 h2,
 h3 {
     font-family: 'Oswald', sans-serif;
@@ -128,6 +128,7 @@ h3 {
     transition: background-color 0.3s, transform 0.3s, color 0.3s;
 }
 
+
 /* Efecto al pasar el ratón por encima del botón (Hover) */
 .btn:hover {
     background-color: #f39c12;
@@ -178,6 +179,7 @@ h3 {
     /* Negrita muy gruesa */
 }
 
+
 /* Contenedor de los enlaces (la lista ul) */
 .nav-links {
     list-style: none;
@@ -191,6 +193,7 @@ h3 {
     padding: 0;
     /* Quita el relleno por defecto */
 }
+
 
 /* Estilo individual de cada enlace dentro de la barra de navegación */
 .nav-links li a {
